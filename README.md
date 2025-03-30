@@ -1,21 +1,33 @@
 # Project 3: Spots
 
-### Overview  
+### Overview
 
-* Intro  
-* Figma  
-* Images  
-  
+- Intro
+- Description of Process
+- Visuals
+- Next Steps
+
 **Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+
+This project is made so all the elements are displayed correctly on popular screen sizes. It was created in a desktop layout then adapted with Grid and media queries to fit several different device sizes.
+
+**Description of Process**
+
+This project was built utilizing Visual Studio Code while referencing the design created by TripleTen in Figma. The Spots project was verified and checked utilizing developer mode in Chrome. Especially when it came to checking the page's responsiveness. Great help from Prettier, Dot and the tutors at TripleTen as well on Discord.
+
+**Visuals**
+
+Desktop width:
+![alt text](images/demo/spots1.png)
+
+Tablet width:
+![alt text](<images/demo/spots 3.png>)
+
+Mobile width:
+![alt text](<images/demo/spots 4 mobile.png>)
+
+**Next Steps**
+
+Nothing to note. Open to improvements.
+
+Be well and enjoy!
