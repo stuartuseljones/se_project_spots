@@ -1,5 +1,7 @@
 # Project 3: Spots
 
+https://github.com/stuartuseljones/se_project_spots
+
 ### Overview
 
 - Intro

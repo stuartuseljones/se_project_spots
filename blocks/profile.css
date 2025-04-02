@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   padding: 34px 0 20px;
-  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .profile__name {
@@ -49,13 +48,18 @@
   font-weight: 500;
   gap: 8px;
   white-space: nowrap;
+  border: none;
+  cursor: pointer;
 }
 
 .profile__add-button::before {
   content: "";
-  height: 52px;
-  width: 149px;
+  height: 12px;
+  width: 12px;
   background-image: url(../images/plus_icon.svg);
+  background-size: cover;
+  display: flex;
+
 }
 
 .profile__add-button:hover {
@@ -80,6 +84,7 @@
 }
 
 .profile__edit-button {
+  position: relative;
   border: none;
   padding: 0;
   margin: 0;
@@ -90,13 +95,22 @@
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
+  cursor: pointer;
+  background: transparent;
 }
 
 .profile__edit-button::before {
   content: "";
+  display: flex;
+  justify-content: center;
   width: 16px;
   height: 16px;
   background-image: url(../images/pencil.svg);
+  background-size: cover;
+  position: absolute;
+  gap: 20px;
+  right: 100px;
+ transform: translate(50%); */
 }
 
 .profile__edit-button:hover {
@@ -128,11 +142,12 @@
 
   .profile__edit-button {
     align-self: center;
-    padding-top: 32px;
+    margin-top: 32px;
   }
 
   .profile__add-button {
     margin: auto;
+    width: 100%;
   }
 
   .profile__name {
@@ -142,8 +157,6 @@
   }
 
   .profile__description {
-    margin: 0;
-    font-size: 16px;
     max-width: 288px;
   }
 }

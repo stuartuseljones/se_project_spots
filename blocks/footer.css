@@ -3,8 +3,9 @@
 }
 
 .footer__copyright {
+  color: rgba(33, 33, 33, 0.7);
   margin: 60px auto;
-  size: 16px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 400;
 }
