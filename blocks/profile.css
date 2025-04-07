@@ -40,7 +40,6 @@
   background-color: #212121;
   color: #fcf5e5;
   border-radius: 8px;
-  width: 149px;
   padding: 18px 32px;
   margin-top: auto;
   font-size: 16px;
@@ -50,6 +49,7 @@
   white-space: nowrap;
   border: none;
   cursor: pointer;
+  justify-content: center;
 }
 
 .profile__add-button::before {
@@ -83,6 +83,7 @@
 }
 
 .profile__edit-button {
+  display: flex;
   position: relative;
   border: none;
   padding: 0;
@@ -96,20 +97,16 @@
   font-weight: 500;
   cursor: pointer;
   background: transparent;
+  gap: 8px;
 }
 
 .profile__edit-button::before {
   content: "";
   display: flex;
-  justify-content: center;
   width: 16px;
   height: 16px;
   background-image: url(../images/pencil.svg);
-  background-size: cover;
-  position: absolute;
-  gap: 20px;
   right: 100px;
-  transform: translate(50%);
 }
 
 .profile__edit-button:hover {
