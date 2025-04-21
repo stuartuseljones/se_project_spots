@@ -106,7 +106,6 @@
   width: 16px;
   height: 16px;
   background-image: url(../images/pencil.svg);
-  right: 100px;
 }
 
 .profile__edit-button:hover {

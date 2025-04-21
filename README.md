@@ -1,10 +1,11 @@
 # Project 3: Spots
 
-https://github.com/stuartuseljones/se_project_spots
+https://stuartuseljones.github.io/se_project_spots/
 
 ### Overview
 
 - Intro
+- Video Overview
 - Description of Process
 - Visuals
 - Next Steps
@@ -12,6 +13,9 @@ https://github.com/stuartuseljones/se_project_spots
 **Intro**
 
 This project is made so all the elements are displayed correctly on popular screen sizes. It was created in a desktop layout then adapted with Grid and media queries to fit several different device sizes.
+
+**Video Overview**
+https://drive.google.com/file/d/1NKjVCIA8SYKITkTLChjZY52n4MsYYVlk/view?usp=drive_link
 
 **Description of Process**
 
