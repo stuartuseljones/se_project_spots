@@ -22,6 +22,7 @@
 }
 
 .modal__container {
+  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
@@ -40,6 +41,7 @@
   border: none;
   opacity: 40%;
   background-image: url(../images/close_btn2.svg);
+  cursor: pointer;
 }
 
 .modal__close-btn:hover {
@@ -75,6 +77,11 @@
   border-color: rgba(33, 33, 33, 0.4);
   margin: 8px 0 0;
   padding: 16px 12px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 20px;
+  list-style: 1;
+  box-sizing: border-box;
 }
 
 .modal__input::placeholder {
@@ -95,9 +102,19 @@
   font-weight: normal;
   line-height: 1;
   font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.modal__save-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 @media screen and (max-width: 627px) {
+  .modal__input {
+    font-size: 16px;
+  }
+
   .modal__save-btn {
     max-width: none;
   }
