@@ -68,6 +68,7 @@
               Caption
               <input
                 id="card-caption-input"
+                required
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
@@ -107,8 +108,11 @@
       </div>
       <div class="modal modal_type_preview" id="preview-modal">
         <div class="modal__image-container">
-          <button type="button" class="modal__close-btn_type_preview"></button>
-          <img src="#" class="modal__image" alt="#" />
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn_type_preview"
+          ></button>
+          <img src="#" class="modal__image" alt="" />
           <p class="modal__caption"></p>
         </div>
       </div>
