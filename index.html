@@ -54,7 +54,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New post</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label">
               Image link
               <input
@@ -63,7 +63,11 @@
                 class="modal__input"
                 placeholder="Post a link to the picture"
                 required
-              /> </label
+              />
+              <span
+                id="card-image-input-error"
+                class="modal__error form__input-error link-input-error"
+              ></span> </label
             ><label for="card-caption-input" class="modal__label">
               Caption
               <input
@@ -72,7 +76,13 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                minlength="2"
+                max="30"
               />
+              <span
+                id="card-caption-input-error"
+                class="modal__error form__input-error caption-input-error"
+              ></span>
             </label>
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
@@ -82,7 +92,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
               <input
@@ -91,7 +101,13 @@
                 class="modal__input"
                 placeholder="Type your name"
                 required
-              /> </label
+                minlength="2"
+                maxlength="40"
+              />
+              <span
+                id="profile-name-input-error"
+                class="modal__error form__input-error name-input-error"
+              ></span> </label
             ><label for="profile-description-input" class="modal__label">
               Description
               <input
@@ -100,7 +116,13 @@
                 class="modal__input"
                 placeholder="Describe yourself"
                 required
+                minlength="2"
+                maxlength="200"
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error form__input-error desc-input-error"
+              ></span>
             </label>
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
@@ -117,6 +139,7 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
