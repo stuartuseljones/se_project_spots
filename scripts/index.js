@@ -45,11 +45,16 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  disableButton(newPostSubmitBtn, settings);
+  currentModal = modal;
+  document.addEventListener("keydown", handleEscapeKey);
+  if (modal === newPostModal) {
+    disableButton(newPostSubmitBtn, settings);
+  }
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileModal.addEventListener("click", (event) => {
@@ -57,6 +62,12 @@ editProfileModal.addEventListener("click", (event) => {
     editProfileModal.classList.remove("modal_is-opened");
   }
 });
+
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    closeModal(currentModal);
+  }
+}
 
 document.addEventListener("keydown", (event) => {
   if (
@@ -118,14 +129,17 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
     openModal(previewModal);
-  });
-  previewModal.addEventListener("click", (event) => {
-    if (event.target === previewModal) {
-      previewModal.classList.remove("modal_is-opened");
-    }
+    initializeApp();
   });
 
   return cardElement;
+}
+function initializeApp() {
+  previewModal.addEventListener("click", (event) => {
+    if (event.target === previewModal) {
+      closeModal(previewModal);
+    }
+  });
 }
 
 const previewModal = document.querySelector("#preview-modal");

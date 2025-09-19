@@ -2,7 +2,7 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-btn",
-  inactiveButtonClass: "modal__save-btn_disabled",
+  inactiveButtonClass: "modal__save-btn-disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error",
 };
@@ -11,12 +11,14 @@ const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
   inputEl.classList.add(config.inputErrorClass);
+  errorMsgEl.classList.add(config.errorClass);
 };
 
 const hideInputError = (formEl, inputEl, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
   inputEl.classList.remove(config.inputErrorClass);
+  errorMsgEl.classList.remove(config.errorClass);
 };
 
 const checkInputValidity = (formEl, inputEl, config) => {
@@ -33,18 +35,21 @@ const hasInvalidInput = (inputList) => {
 };
 const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList)) {
-    disableButton(buttonEl);
-    buttonEl.classList.add(config.inactiveButtonClass);
+    disableButton(buttonEl, config);
   } else {
-    buttonEl.disabled = false;
-    buttonEl.classList.remove(config.inactiveButtonClass);
+    enableButton(buttonEl, config);
   }
 };
 
-const disableButton = (buttonEl, config) => {
+function disableButton(buttonEl, config) {
   buttonEl.disabled = true;
-};
+  buttonEl.classList.add(config.inactiveButtonClass);
+}
 
+function enableButton(buttonEl, config) {
+  buttonEl.disabled = false;
+  buttonEl.classList.remove(config.inactiveButtonClass);
+}
 const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, config);
@@ -52,6 +57,7 @@ const resetValidation = (formEl, inputList, config) => {
 };
 
 const setEventListeners = (formEl, config) => {
+  toggleButtonState(inputList, buttonElement, config);
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
