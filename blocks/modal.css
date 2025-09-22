@@ -96,10 +96,6 @@
   background-color: transparent;
 }
 
-.modal__close-btn_type_preview:hover {
-  background-image: url(../images/close_hover.svg);
-}
-
 .modal__close-btn:hover {
   opacity: 100%;
 }
