@@ -1,3 +1,11 @@
+import enableValidation from "../scripts/validation.js";
+import {
+  settings,
+  disableButton,
+  resetValidation,
+} from "../scripts/validation.js";
+import "./index.css";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -42,6 +50,8 @@ const editProfileNameInput = editProfileModal.querySelector(
 const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
+
+enableValidation(settings);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
