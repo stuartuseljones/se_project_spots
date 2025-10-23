@@ -12,7 +12,7 @@ https://stuartuseljones.github.io/se_project_spots/
 
 **Intro**
 
-\*Update: on this same project, I incorporated JavaScript for several purposes. Opening and closing modals, creating new cards, and setting up validation when filling out the form.
+*Update: on this same project, I incorporated JavaScript for several purposes. Opening and closing modals, creating new cards, and setting up validation when filling out the form. 
 
 This project is made so all the elements are displayed correctly on popular screen sizes. It was created in a desktop layout then adapted with Grid and media queries to fit several different device sizes.
 
