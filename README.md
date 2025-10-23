@@ -17,7 +17,11 @@ https://stuartuseljones.github.io/se_project_spots/
 This project is made so all the elements are displayed correctly on popular screen sizes. It was created in a desktop layout then adapted with Grid and media queries to fit several different device sizes.
 
 **Video Overview**
-https://drive.google.com/file/d/1NKjVCIA8SYKITkTLChjZY52n4MsYYVlk/view?usp=sharing
+
+Check out these videos, where I describe my project and some of the challenges I faced while building it:
+
+- First Website Iteration Video https://drive.google.com/file/d/1NKjVCIA8SYKITkTLChjZY52n4MsYYVlk/view?usp=sharing
+- Second Iteration Video (API's) https://drive.google.com/file/d/111lox1C1_qSaqIoc58uz32jLYMX9hW6W/view?usp=sharing
 
 **Description of Process**
 
